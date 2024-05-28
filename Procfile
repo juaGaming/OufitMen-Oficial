@@ -1,1 +1,1 @@
-web: gunicorn outfitmen.wsgi
+web: python manage.py collecstatic && gunicorn outfitmen.wsgi
