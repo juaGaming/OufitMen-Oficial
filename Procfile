@@ -1,1 +1,1 @@
-web: python manage.py collectstatic && gunicorn outfitmen.wsgi
+web: python manage.py collectstatic --noinput && gunicorn outfitmen.wsgi
