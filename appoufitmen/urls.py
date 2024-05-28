@@ -15,7 +15,7 @@ urlpatterns = [
     path('EliminarPrendas/<int:pk>',EliminarPrendas.as_view(),name='eliminar'),
     
     #Vistas Libres
-    path('', views.inicio, name="inicio"),
+    path('', views.inicio, name="Page_Inicio"),
     path('Casual/',views.Casual, name="RegistroUsuario"),
     path('Formal/',views.Formal, name="RegistroUsuario"),
     
