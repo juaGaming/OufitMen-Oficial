@@ -133,7 +133,12 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'appoufitmen/static')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfile')
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    #'django.contrib.staticfiles.finders.AppDirectoriesFinder',    #causes verbose duplicate notifications in django 1.9
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
