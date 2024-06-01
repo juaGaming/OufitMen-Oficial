@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 } else {
                     Swal.fire({
-                        title: "P No Encontrado",
+                        title: "Producto No Encontrado",
                         icon: "error", 
                         confirmButtonText: "Aceptar"
                     });
