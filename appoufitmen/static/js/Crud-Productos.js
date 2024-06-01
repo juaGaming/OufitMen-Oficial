@@ -156,10 +156,10 @@ function EliminarPrendas(prod_Id) {
             .then(response => response.json())
             .then(data => {
                 Consultar();
-                Swal.fire("Éxito", "P eliminado exitosamente.", "success");
+                Swal.fire("Éxito", "Producto eliminado exitosamente.", "success");
             })
             .catch(error => {
-                console.error("Error al eliminar el P:", error);
+                console.error("Error al eliminar el Producto:", error);
                 Swal.fire("Error", "Error al eliminar el equipo.", "error");
             });
         }
