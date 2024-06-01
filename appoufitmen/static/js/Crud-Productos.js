@@ -1,6 +1,6 @@
 // Listar prendas
 function Consultar() {
-    fetch("http://127.0.0.1:8000/listarPrendas",{
+    fetch("'https://oufitmen-oficial-production.up.railway.app/listarPrendas'",{
         method: "GET",
         headers: {
             "consultar-Type": "OufitMen/json"
@@ -156,10 +156,10 @@ function EliminarPrendas(prod_Id) {
             .then(response => response.json())
             .then(data => {
                 Consultar();
-                Swal.fire("Éxito", "Dispositivo eliminado exitosamente.", "success");
+                Swal.fire("Éxito", "Producto eliminado exitosamente.", "success");
             })
             .catch(error => {
-                console.error("Error al eliminar el Dispositivo:", error);
+                console.error("Error al eliminar el Producto:", error);
                 Swal.fire("Error", "Error al eliminar el equipo.", "error");
             });
         }
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 } else {
                     Swal.fire({
-                        title: "Dispositivo No Encontrado",
+                        title: "Producto No Encontrado",
                         icon: "error", 
                         confirmButtonText: "Aceptar"
                     });
