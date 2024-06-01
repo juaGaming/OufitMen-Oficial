@@ -92,7 +92,7 @@ function agregarProducto() {
   
     var jsonData = JSON.stringify(datos);
   
-    fetch("http://127.0.0.1:8000/InsertarPrendas/", {
+    fetch("https://oufitmen-oficial-production.up.railway.app/InsertarPrendas/", {
         method: "POST",
         body: jsonData,
         headers: {
@@ -136,7 +136,7 @@ function agregarProducto() {
 
 //Eliminar prendas
 function EliminarPrendas(prod_Id) {
-    const url = `http://127.0.0.1:8000/EliminarPrendas/${prod_Id}`;
+    const url = `https://oufitmen-oficial-production.up.railway.app/EliminarPrendas/${prod_Id}`;
 
     Swal.fire({
         title: "¿Estás seguro?",
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const Productoid = ProductoidInput.value;
 
         if (Productoid) {
-            const url = `http://127.0.0.1:8000/BuscarProducto/${Productoid}/`;
+            const url = `https://oufitmen-oficial-production.up.railway.app/BuscarProducto/${Productoid}/`;
 
             fetch(url, {
                 method: "GET",
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function capturarYActualizarProducto(prod_Id) {
-    fetch(`http://127.0.0.1:8000/BuscarProducto/${prod_Id}`, {
+    fetch(`https://oufitmen-oficial-production.up.railway.app/BuscarProducto/${prod_Id}`, {
         method: "GET",
         headers: {
             "consultar-Type": "AppOufitMen/json"
@@ -299,7 +299,7 @@ function ActualizarProducto (prod_Id) {
 
     var jsonData = JSON.stringify(datos);
 
-    fetch("http://127.0.0.1:8000/ActualizarProducto/" + prod_Id, {
+    fetch("https://oufitmen-oficial-production.up.railway.app/ActualizarProducto/" + prod_Id, {
         method: "POST", 
         body: jsonData,
         headers: {
